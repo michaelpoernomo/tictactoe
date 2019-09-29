@@ -5,7 +5,7 @@ const regexId = /^(c-\d+-\d+)$/;
 var turnFlag = false;
 var board = new Array(nof_row);
 var nofTurn = 0;
-initBoard();
+
 startGame();
 
 function initBoard(){
@@ -45,7 +45,14 @@ function inBetween(row_id, col_id){
   return ((row_id >= 0) && (row_id < nof_row)) && ((col_id >= 0) && (col_id < nof_col));
 }
 
+function restart(){
+  nofTurn = 0;
+  getElId("table-board").innerHTML = "";
+}
+
 function startGame() {
+  restart();
+  initBoard();
   let cells = document.querySelectorAll('.cell');
   document.querySelector('.endgame').style.display = "none";
   document.querySelector('.endgame .text').innerText ="";
