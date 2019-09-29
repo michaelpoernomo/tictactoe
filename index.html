@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Tic Tac Toe</title>
-  <button onclick="startGame()">Reload</button>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  	<div><label>Number of row &nbsp;</label><input tabindex="2" type="number" id="nof_row" value="3"/></div>
+  	<div><label>Number of column &nbsp;</label><input type="number" id="nof_col" value="3"/></div>
+  	<div><label>Connect # in a row &nbsp;</label><input type="number" id="nof_win" value="3"/></div>
+  	<button onclick="startGame()">Submit</button>
 	<table><tbody id="table-board"></tbody></table>
 	<div class="endgame">
 		<div class="text"></div>

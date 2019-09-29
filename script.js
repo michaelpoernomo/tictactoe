@@ -1,7 +1,7 @@
-const nof_row = 3;
-const nof_col = 3;
-const nof_win = 3;
 const regexId = /^(c-\d+-\d+)$/;
+var nof_row = 3;
+var nof_col = 3;
+var nof_win = 3;
 var turnFlag = false;
 var board = new Array(nof_row);
 var nofTurn = 0;
@@ -48,6 +48,12 @@ function inBetween(row_id, col_id){
 function restart(){
   nofTurn = 0;
   getElId("table-board").innerHTML = "";
+  nof_row = getElId("nof_row").value;
+  nof_col = getElId("nof_col").value;
+  nof_win = getElId("nof_win").value;
+  nof_row = !nof_row ? 3 : nof_row;
+  nof_col = !nof_col ? 3 : nof_col;
+  nof_win = !nof_win ? 3 : nof_win;
 }
 
 function startGame() {

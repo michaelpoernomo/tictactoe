@@ -9,6 +9,16 @@ td {
   cursor: pointer;
 }
 
+label {
+   width: 9em;
+   display: inline-block;
+   text-align: right;
+}
+
+button {
+  width: 10em;
+}
+
 table {
   border-collapse: collapse;
   position:   absolute;
