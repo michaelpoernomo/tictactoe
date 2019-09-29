@@ -51,9 +51,9 @@ function restart(){
   nof_row = getElId("nof_row").value;
   nof_col = getElId("nof_col").value;
   nof_win = getElId("nof_win").value;
-  nof_row = !nof_row ? 3 : nof_row;
-  nof_col = !nof_col ? 3 : nof_col;
-  nof_win = !nof_win ? 3 : nof_win;
+  nof_row = !nof_row || nof_row == 0 ? 3 : nof_row;
+  nof_col = !nof_col || nof_row == 0 ? 3 : nof_col;
+  nof_win = !nof_win || nof_row == 0 ? 3 : nof_win;
 }
 
 function startGame() {
